@@ -10,7 +10,6 @@ public class TitleController : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("?");
         StartCoroutine("ShowTitle");
     }
     IEnumerator ShowTitle()

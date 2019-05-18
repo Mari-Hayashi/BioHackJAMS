@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using UnityEngine.UI;
+using TMPro;
 
 [System.Serializable]
 public class QuestionController : MonoBehaviour
@@ -10,7 +11,9 @@ public class QuestionController : MonoBehaviour
     [SerializeField]
     private ButtonClass[] buttons;
     [SerializeField]
-    private Text questionText;
+    private TextMeshPro questionText;
+    [SerializeField]
+    private InputField textbox;
     private TextAsset csvFile;
     private const string parentFileName = "QuestionsForParent";
     private const string kidFileName = "QuestionsForKids";
@@ -24,6 +27,7 @@ public class QuestionController : MonoBehaviour
         parentQuestions = new List<Question>();
         readParentCSV();
         curQuestionIndex = 0;
+        loadQuestion();
     }
 
     private void readParentCSV()
@@ -54,8 +58,21 @@ public class QuestionController : MonoBehaviour
 
         reader.Close();
     }
-
-    private void loadQuestions()
+    private void getAnswer(int choice)
+    {
+        if (currentQuestion.numChoices == 0)
+        {
+            if (textbox.text == "") return;
+            parentQuestions[curQuestionIndex].answer = textbox.text;
+        }
+        else
+        {
+            parentQuestions[curQuestionIndex].answer = parentQuestions[curQuestionIndex].choice[choice - 1];
+        }
+        curQuestionIndex++;
+        loadQuestion();
+    }
+    private void loadQuestion()
     {
         currentQuestion = parentQuestions[curQuestionIndex];
         questionText.text = currentQuestion.questionStr;
@@ -64,6 +81,7 @@ public class QuestionController : MonoBehaviour
             buttons[0].gameObject.SetActive(false);
             buttons[1].gameObject.SetActive(false);
             buttons[2].changeText("OK");
+            textbox.gameObject.SetActive(true);
         }
         else
         {
@@ -88,10 +106,10 @@ public class QuestionController : MonoBehaviour
             Collider2D collision2d = Physics2D.OverlapPoint(clicklocation);
             if (collision2d)
             {
-                if (LayerMask.LayerToName(collision2d.gameObject.layer) == "Choice1")
-                {
-                    Debug.Log("YES!!");
-                }
+                string layername = LayerMask.LayerToName(collision2d.gameObject.layer);
+                if (layername == "Choice1") getAnswer(1);
+                else if (layername == "Choice2") getAnswer(2);
+                else if (layername == "Choice3") getAnswer(3);
             }
         }
     }

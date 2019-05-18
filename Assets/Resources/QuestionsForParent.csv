@@ -1,26 +1,26 @@
-Question,Question type (0 = fr. 1 = mp),Choices,,
+Question,NumberOfChoices (0 for free responce),Choices,,
 Date:,0,,,
 Name of person completing this form:,0,,,
-Is he/she currently attending school?,1,Yes,No,
+Is he/she currently attending school?,2,Yes,No,
 Grade (of child):,0,,,
-Sex (of child):,1,Male,Female,
+Sex (of child):,2,Male,Female,
 Age (of child):,0,,,
 What is your main concern?,0,,,
-"distractible, has trouble sticking to an activity",1,never,sometimes,often
-fails to finish things he/she starts,1,never,sometimes,often
-difficulty following directions or instructions,1,never,sometimes,often
-cranky,1,never,sometimes,often
-"defiant, talks back to adults",1,never,sometimes,often
-blames others for his/her own mistakes,1,never,sometimes,often
-steals things at home,1,never,sometimes,often
-destroys things belonging to others,1,never,sometimes,often
-engages in vandalism,1,never,sometimes,often
-worries about being separated from loved ones,1,never,sometimes,often
-worries bad things will happen to loved ones,1,never,sometimes,often
-scared to sleep without parents nearby,1,never,sometimes,often
-worries about doing better at things,1,never,sometimes,often
-worries about past behaviour,1,never,sometimes,often
-worries about doing the wrong thing,1,never,sometimes,often
-no interest in usual activities,1,never,sometimes,often
-gets no pleasure from usual activities,1,never,sometimes,often
-trouble enjoying him/her self,1,never,sometimes,often
+"Is he/she distractible, has trouble sticking to an activity?",3,never,sometimes,often
+Is he/she fail to finish things once starts?,3,never,sometimes,often
+Can he/she following directions or instructions correctly?,3,never,sometimes,often
+Is he/she cranky?,3,never,sometimes,often
+Is he/she defiant and talking back to adults?,3,never,sometimes,often
+Does he/she blame others for his/her own mistakes?,3,never,sometimes,often
+Does he/she steal things at home?,3,never,sometimes,often
+Does he/she destroy things belonging to others?,3,never,sometimes,often
+Does he/she engage in vandalism?,3,never,sometimes,often
+Does he/she worry about being separated from loved ones?,3,never,sometimes,often
+Does he/she worry bad things will happen to loved ones?,3,never,sometimes,often
+Is he/she scared to sleep without parents nearby?,3,never,sometimes,often
+Does he/she worry about doing better at things?,3,never,sometimes,often
+Does he/she worry about past behaviours?,3,never,sometimes,often
+Does he/she worry about doing the wrong thing?,3,never,sometimes,often
+Does he/she have interest in usual activities?,3,never,sometimes,often
+Does he/she get pleasure from usual activities?,3,never,sometimes,often
+Have he/she found trouble enjoying him/her self?,3,never,sometimes,often
