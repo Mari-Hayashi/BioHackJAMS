@@ -2,23 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class QuestionController : MonoBehaviour
 {
     [SerializeField]
+    private ButtonClass[] buttons;
+    [SerializeField]
+    private Text questionText;
     private TextAsset csvFile;
     private const string parentFileName = "QuestionsForParent";
     private const string kidFileName = "QuestionsForKids";
 
     private List<Question> parentQuestions;
-    private int curQuestion;
+    private int curQuestionIndex;
+    private Question currentQuestion;
 
     private void Start()
     {
         parentQuestions = new List<Question>();
         readParentCSV();
-        curQuestion = 0;
+        curQuestionIndex = 0;
     }
 
     private void readParentCSV()
@@ -50,6 +55,31 @@ public class QuestionController : MonoBehaviour
         reader.Close();
     }
 
+    private void loadQuestions()
+    {
+        currentQuestion = parentQuestions[curQuestionIndex];
+        questionText.text = currentQuestion.questionStr;
+        if (currentQuestion.numChoices == 0)
+        {
+            buttons[0].gameObject.SetActive(false);
+            buttons[1].gameObject.SetActive(false);
+            buttons[2].changeText("OK");
+        }
+        else
+        {
+            int i;
+            for (i = 0; i < currentQuestion.numChoices; ++i)
+            {
+                buttons[i].gameObject.SetActive(true);
+                buttons[i].changeText(currentQuestion.choice[i]);
+            }
+            while (i < 3)
+            {
+                buttons[i].gameObject.SetActive(false);
+                i++;
+            }
+        }
+    }
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
