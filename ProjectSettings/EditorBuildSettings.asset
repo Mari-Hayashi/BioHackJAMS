@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Title.unity
+    guid: 7f476ffcd3494f2498c62689a74b2cfb
+  - enabled: 1
     path: Assets/Scenes/Therapist.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Parents.unity
+    guid: 4917fc0ccdaf1064caae43e677497f97
+  - enabled: 1
+    path: Assets/Scenes/Kids.unity
+    guid: 4bde461a9a8da1547996fcd3cfcece5f
   m_configObjects: {}

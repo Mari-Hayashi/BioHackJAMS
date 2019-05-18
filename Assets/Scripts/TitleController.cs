@@ -7,13 +7,15 @@ using UnityEngine.SceneManagement;
 public class TitleController : MonoBehaviour
 {
     private const float timeToWait = 2f;
+
     void Start()
     {
+        Debug.Log("?");
         StartCoroutine("ShowTitle");
     }
     IEnumerator ShowTitle()
     {
         yield return new WaitForSeconds(timeToWait);
-        SceneManager.LoadScene("Parent");
+        SceneManager.LoadScene("Therapist");
     }
 }

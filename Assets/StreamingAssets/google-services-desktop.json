@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "517560218115",
+    "firebase_url": "https://biohack2019jams-f1ef1.firebaseio.com",
+    "project_id": "biohack2019jams-f1ef1",
+    "storage_bucket": "biohack2019jams-f1ef1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:517560218115:android:8fd60409180f3249",
+        "android_client_info": {
+          "package_name": "com.JAMS.BIOHACKJAMS"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "517560218115-d5qb0b835di4u68qu8r9dhievkvor8fp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCi3VpXIJftIwDBnVh-rLol0g2gflhVWoI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "517560218115-d5qb0b835di4u68qu8r9dhievkvor8fp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
